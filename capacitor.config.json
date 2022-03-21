@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Plot Cards",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

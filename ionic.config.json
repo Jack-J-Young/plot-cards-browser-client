@@ -1,0 +1,8 @@
+{
+  "name": "Plot Cards",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "2594a902"
+}
