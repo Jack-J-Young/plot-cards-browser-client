@@ -1,0 +1,13 @@
+div.card-container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+div.card-container > *
+{
+    flex-basis: 300px;
+    width: fit-content;
+}
