@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 export interface Message {
   fromName: string;
@@ -12,6 +13,8 @@ export interface Message {
   providedIn: 'root'
 })
 export class DataService {
+  register_url: string = "http://localhost:3000/register";
+
   public messages: Message[] = [
     {
       fromName: 'Matt Chorsey',
@@ -71,7 +74,7 @@ export class DataService {
     }
   ];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   public getMessages(): Message[] {
     return this.messages;
@@ -79,5 +82,9 @@ export class DataService {
 
   public getMessageById(id: number): Message {
     return this.messages[id];
+  }
+
+  public register(formData: any) {
+    return this.http.post<any>(`${this.register_url}`, formData);
   }
 }
