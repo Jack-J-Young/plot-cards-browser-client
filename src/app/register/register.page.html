@@ -4,14 +4,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item>
-    <ion-label>Email</ion-label>
-    <ion-input id="email" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Password</ion-label>
-    <ion-input id="password" ></ion-input>
-  </ion-item>
-  <ion-button expand="block" fill="outline" (click)="post()">Register</ion-button>
-</ion-content>
+<div class="auth-window">
+  <!-- <ion-content> -->
+    <ion-card>
+      <ion-card-header color="primary">
+        Register
+      </ion-card-header>
+      <ion-card-content padding>
+        <!-- <p>Enter your Zoom username and password</p> -->
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Username</ion-label>
+            <ion-input id="email" type="email"></ion-input>
+          </ion-item>
+          <ion-item style="--padding-top: 10px">
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input id="password" type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="block" fill="outline" (click)="post()">Register</ion-button>
+        <!-- <ion-button *ngIf="loggedIn" expand="full" (click)="logout()">Logout</ion-button> -->
+      </ion-card-content>
+    </ion-card>
+  <!-- </ion-content> -->
+</div>
